@@ -7,6 +7,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -18,13 +19,18 @@ html {
     src: url(/assets/fonts/Forum/Forum-Regular.ttf);
 }
 
-/*header, main, footer {
-    border: 1px solid red;
-}*/
+a {
+    text-decoration: none;
+    color:#FFF;
+}
+
+li {
+    list-style: none;
+}
 
 .container {
-    margin: 0 auto;
-    width: 1440px;
+    margin: 0 auto;    /*возможно надо будет убрать!!!!!!!!!!!*/
+    max-width: 1440px;
 }
 
 .section {
@@ -45,6 +51,7 @@ html {
 
 header {
     background-color: #030303;
+    height: 150px;
 }
 
 .header-container {
@@ -59,9 +66,16 @@ header {
     align-items: center;
 }
 
-.logo-svg {
+.mask-logo {
     width: 49px;
     height: 26px;
+    background-color: #FFF;
+    -webkit-mask-image: url(/assets/img/Logo.svg);
+    transition: 0.2s;
+}
+
+.mask-logo:hover {
+    background-color: #9d8665;
 }
 
 .logo-text {
@@ -70,25 +84,162 @@ header {
     color: #FFF;
     text-transform: uppercase;
     font-size: 28px;
+    transition: 0.2s;
+}
+
+.logo-text:hover {
+    color: #9d8665;
 }
 
 .navigation {
     font-family: Roboto;
     font-size: 22px;
     color: #FFF;
+    font-weight: 100;
 }
 
 .nav-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+    max-width: 775px;
 }
 
 .nav-item {
-    list-style: none;
+    padding-left: 55px;
+    height: 150px;
 }
 
-a {
-    text-decoration: none;
+.nav-link {
+    color: #FFF;
+    transition: 0.2s;
+    line-height: 150px
+}
+
+.nav-link:hover {
+    color: #9d8665;
+}
+
+.nav-link:active {
+    color: #7E6C51;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-list {
+
+}
+
+.dark-section-title {
+    font-family: Forum;
+    font-size: 80px;
+    color:#FFF;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: Forum;
+    font-size: 80px;
+    color:#9d8665;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.hero-list-text {
+    font-family: Roboto;
+    font-size: 28px;
+    color:#FFF;
+    font-weight: 100;
+    padding-top: 25px;
+    padding-bottom: 75px;
+}
+
+.hero-list-btn {
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 22px;
+    color:#FFF;
+    font-weight:100;
+    padding-left: 64px;
+    padding-right: 64px;
+    line-height: 75px;
+    background-color: #710707;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.hero-list-btn:hover {
+    background-color: #9d8665;
+}
+
+.hero-img-lisa {
+    width: 1000px;
+    height: 750;
+}
+
+.visiting-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px 60px;
+}
+
+.underline-title {
+    position: relative;
+}
+.underline-title::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #710707;
+}
+
+.visiting-img {
+    width: 440px;
+    height: 285px;
+    padding-top: 75px;
+}
+
+.visiting-item-title {
+    font-family: Forum;
+    font-size: 32px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.underline-text {
+    position: relative;
+}
+.underline-text::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 300px;
+    height: 2px;
+    background-color: #710707;
+}
+
+.visiting-item-text-1 {
+    font-family: Roboto;
+    font-size: 22px;
+    color: #000;
+    font-weight: 100;
+    padding-top: 10px;
+}
+
+.visiting-item-text-2 {
+    font-family: Roboto;
+    font-size: 18px;
+    color: #000;
+    font-weight: 100;
+    padding-top: 10px;
 }
