@@ -389,7 +389,7 @@ header {
     width: 68px;
     height: 48px;
     left: 192px;
-    top: 80px;
+    top: 125px;
 }
 
 .little-video {
@@ -397,4 +397,28 @@ header {
     height: 254px;
     object-fit: cover;
     padding-top: 40px;
+}
+
+.main-gallery-container {
+    display: flex;
+}
+
+.gallery-container {
+    padding-top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.gallery-container-center {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.gallery-img {
+    padding-bottom: 24px;
+    width: 456px;
+    height: 570px;
 }
