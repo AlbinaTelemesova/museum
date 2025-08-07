@@ -39,12 +39,12 @@ li {
 }
 
 .dark-section {
-    padding-top: 75px;
+    padding-top: 90px;
     padding-bottom: 75px;
     background-color: #030303;
 }
 
-.section {
+.video section {
     padding-top: 90px;
     padding-bottom: 75px;
 }
@@ -132,14 +132,6 @@ header {
 
 .hero-list {
 
-}
-
-.dark-section-title {
-    font-family: Forum;
-    font-size: 80px;
-    color:#FFF;
-    font-weight: 200;
-    text-transform: uppercase;
 }
 
 .section-title {
@@ -242,4 +234,39 @@ header {
     color: #000;
     font-weight: 100;
     padding-top: 10px;
+}
+
+.container-explore {
+    display: flex;
+    flex-direction: row;
+}
+
+.dark-section-title {
+    font-family: Forum;
+    font-size: 80px;
+    color:#FFF;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.explore-text {
+    font-family: Roboto;
+    font-size: 22px;
+    color:#FFF;
+    font-weight: 100;
+    padding-top: 25px;
+}
+
+.explore-block-text {
+    padding-top: 75px;
+}
+
+.explore-span {
+    color:#CAAA7D;
+}
+
+.explore-img {
+    width: 720px;
+    height: 700px;
+    padding-left: 60px;
 }
