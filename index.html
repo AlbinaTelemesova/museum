@@ -198,7 +198,47 @@
             </div>
         </section>
         <section id="tickets" class="tickets section">
-            <div class="container"></div> 
+            <div class="container">
+                <h2 class="section-title underline-title">Buy tickets</h2>
+                <div class="tickets-container">
+                    <img src="/assets/img/buy-tickets.jpg" alt="Picture" class="ticket-img">
+                    <div class="ticket-type">
+                        <h3 class="ticket-title">Ticket Type</h3>
+                        <label class="check-ticket">Permanent exhibition
+                            <input checked="checked" name="radio" type="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-ticket">Temporary exhibition
+                            <input name="radio" type="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-ticket">Combined Admission
+                            <input name="radio" type="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="amount">
+                        <h3 class="ticket-title">Amount</h3>
+                        <div class="age-btn">
+                            <p class="age">Basic 18+</p>
+                            <div class="change-age">
+                                <button class="change-age-btn" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                <button class="change-age-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </div>    
+                            <p class="age">Senior 65+</p>
+                            <div class="change-age">
+                                <button class="change-age-btn" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                <button class="change-age-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </div>    
+                        </div>
+                        <h3 class="ticket-title total">Total €220</h3>
+                        <button class="buy-btn" type="button">Buy Now</button>
+                    </div>
+                </div>
+                <img src="/assets/img/parallax.jpg" alt="parallax" class="parallax">
+            </div> 
         </section>
         <section id="contacts" class="contacts section">
             <div class="container"></div>

@@ -415,10 +415,154 @@ header {
     display: flex;
     flex-direction: column;
     align-items: space-between;
+    justify-content: space-between;
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 .gallery-img {
     padding-bottom: 24px;
     width: 456px;
     height: 570px;
+}
+
+.tickets-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 103px;
+}
+
+.ticket-title {
+    font-family: Roboto;
+    font-size: 28px;
+    color: #000;
+}
+
+.ticket-img {
+    width: 720px;
+    height: 550px;
+}
+
+.check-ticket {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  line-height: 17px;
+  padding-left: 40px;
+  margin-top: 50px;
+  margin-bottom:25px;
+  font-size: 22px;
+  font-family: Roboto;
+  -webkit-user-select: none; /*запрет выделения*/
+  -moz-user-select: none; /*запрещает выделение текста элемента и его вложенных элементов*/
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.check-ticket input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* Серый фон при наведении курсора */
+.check-ticket:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* переключатель установлен */
+.check-ticket input:checked ~ .checkmark {
+  background-color: #FFF;
+  border: #000 solid 3px;
+}
+
+/* создаем индикатор (точку/круг, которые скрываются, если флажок не установлен */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* показать индикатор, если флажок установлен */
+.check-ticket input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* оформление индикатора */
+.check-ticket .checkmark:after {
+ 	top: 5px;
+	left: 5px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #000;
+}
+
+.amount {
+    text-align: right;
+}
+
+.number {
+    all: unset;
+    font-size: 22px;
+    font-family: Roboto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.age-btn{
+    margin-top: 25px;
+}
+.age {
+    font-size: 22px;
+    font-family: Roboto;
+    padding-bottom: 15px;
+}
+
+.change-age {
+    border: #000 solid 3px;;
+}
+
+.change-age-btn {
+    font-size: 32px;
+    font-family: Roboto;
+    background-color: #FFF;
+    border: none;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.total {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.buy-btn {
+    font-size: 22px;
+    font-family: Roboto;
+    background-color: #000;
+    color: #FFF;
+    width: 175px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 100;
+    border-radius: 3px;
+}
+
+.parallax {
+    width: 1440px;
+    height: 400px;
+    margin-top: 75px;
 }
