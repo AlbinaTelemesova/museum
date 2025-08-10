@@ -566,3 +566,34 @@ header {
     height: 400px;
     margin-top: 75px;
 }
+
+.contact-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 75px;
+}
+
+.contact-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-title {
+    font-size: 28px;
+    font-family: Roboto;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.contact-text {
+    font-size: 22px;
+    font-family: Roboto;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.contact-map {
+    width: 960px;
+    height: 620px;
+    margin-left: 200px;
+}
