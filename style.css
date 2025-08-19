@@ -29,7 +29,7 @@ li {
 }
 
 .container {
-    margin: 0 auto;    /*возможно надо будет убрать!!!!!!!!!!!*/
+    margin: 0 auto;
     max-width: 1440px;
 }
 
@@ -79,12 +79,14 @@ header {
 }
 
 .logo-text {
+    font-weight: normal;
     padding-left: 25px;
     font-family: Forum, sans-serif;
     color: #FFF;
     text-transform: uppercase;
     font-size: 28px;
     transition: 0.2s;
+    letter-spacing: 5px;
 }
 
 .logo-text:hover {
@@ -140,6 +142,7 @@ header {
     color:#9d8665;
     font-weight: 200;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .hero-list-text {
@@ -205,6 +208,7 @@ header {
     color: #000;
     text-transform: uppercase;
     font-weight: 200;
+    letter-spacing: 5px;
 }
 
 .underline-text {
@@ -247,6 +251,7 @@ header {
     color:#FFF;
     font-weight: 200;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .explore-text {
@@ -599,7 +604,7 @@ header {
 }
 
 .footer {
-    height: 400px;
+    height: 392px;
 }
 
 .footer-container {
@@ -646,7 +651,7 @@ header {
     left: 0;
     width: 100%;
     height: 3px;
-    top: 265px;
+    top: 140px;
     background-color: #666;
 }
 
