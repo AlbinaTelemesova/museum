@@ -248,6 +248,7 @@ svg * {
   --font-famili-title: 'Forum', sans-serif;
 
   --container-width: 1440px;
+  --padding-x: 20px;
 
   --transition-duration: 0.2s;
 }
@@ -281,22 +282,26 @@ li {
 .section {
   padding-top: 75px;
   padding-bottom: 75px;
+  padding-inline: var(--padding-x);
 }
 
 .dark-section {
   padding-top: 90px;
   padding-bottom: 75px;
   background-color: var(--color-black);
+  padding-inline: var(--padding-x);
 }
 
 .video-section {
   padding-top: 90px;
   padding-bottom: 75px;
+  padding-inline: var(--padding-x);
 }
 
 header {
   background-color: var(--color-black);
   height: 150px;
+  padding-inline: var(--padding-x);
 }
 
 .header-container {
@@ -310,6 +315,7 @@ header {
   justify-content: space-between;
   align-items: center;
   column-gap: 25px;
+  z-index: 2;
 }
 
 .mask-logo {
@@ -358,6 +364,45 @@ header {
 
 .nav-link:active {
   color: var(--color-gold-active);
+}
+
+.header__burger-btn {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 18px;
+  border: none;
+  background-color: var(--color-black);
+  z-index: 2;
+  transition: transform 0.5s opasity 0.5s background-color 0.5s;
+}
+
+.header__burger-btn span {
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-white);
+  left: 0px;
+}
+
+.header__burger-btn span:nth-child(1) {
+  transform: translateY(-9px);
+}
+
+.header__burger-btn span:nth-child(3) {
+  transform: translateY(9px);
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .welcome-container {
@@ -898,4 +943,46 @@ header {
     font-weight: 100;
     padding-top: 0px;
     padding-bottom: 50px;
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    line-height: 130px;
+  }
+
+  .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+  .header__burger-btn {
+    display: block;
+  }
+
+  .nav-list {
+    display: block;
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    height: 585px;
+    background-color: var(--color-black);
+    margin: 0;
+    padding: 165px 0px 0px 55px;
+    top: 0;
+    transition: 0.5s;
+  }
+
+  .nav-link {
+    display: block;
+    line-height: 25px;
+    padding: 0px 0px 25px 0px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  .header.open .nav-list {
+    transform: translateX(100%);
+  }
 }
